@@ -1,16 +1,12 @@
-# uis
+# Login UIs
 
-Login UIs of Famous Applications
+Login UIs of Famous Application.
 
-## Getting Started
+## Applications
 
-This project is a starting point for a Flutter application.
+### Table of Contents
+- _Spotify_(Master)
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+![1](https://user-images.githubusercontent.com/45462725/88136385-bebaba80-cc06-11ea-9bc6-97d885ee0692.png) ![2](https://user-images.githubusercontent.com/45462725/88136474-f164b300-cc06-11ea-9281-d7888da54dd5.png) ![3](https://user-images.githubusercontent.com/45462725/88136587-2cff7d00-cc07-11ea-8ca6-120369a13823.png) ![4](https://user-images.githubusercontent.com/45462725/88136591-312b9a80-cc07-11ea-8b4d-ded0a78831c8.png) ![5](https://user-images.githubusercontent.com/45462725/88136593-312b9a80-cc07-11ea-96a2-2c23e46c46d1.png)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
