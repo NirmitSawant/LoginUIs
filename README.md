@@ -4,6 +4,8 @@ Login UIs of Famous Application.
 
 ## Applications
 
+Code for UI would be in lib file of the each branch (I will try to make more applications , challenge accepted.)
+
 ### Table of Contents
 - _Spotify_(Master)
 
@@ -14,3 +16,8 @@ Login UIs of Famous Application.
 
 ![1](https://user-images.githubusercontent.com/45462725/88274112-d7a39880-ccf8-11ea-903d-4813b2785678.png)  ![2](https://user-images.githubusercontent.com/45462725/88274116-d8d4c580-ccf8-11ea-8e84-bde634ce33db.png)  ![3](https://user-images.githubusercontent.com/45462725/88274117-d8d4c580-ccf8-11ea-9218-2adfe39107dd.png)  ![4](https://user-images.githubusercontent.com/45462725/88274118-d96d5c00-ccf8-11ea-8499-b2ff84d94145.png)  ![5](https://user-images.githubusercontent.com/45462725/88274278-11749f00-ccf9-11ea-8243-30d69daf8218.png)
 
+
+### Disclaimer
+_I havent used any extraordinary widgets even though i could have made the code smaller to look, tried to keep things as basic as possible and tried my best to excuete this UIs with the common widgets and give you all a sense that you can build your own decorations and designed widgets with all minimal basics._
+
+_**!!Can suggest some challengling login UIs!!**_
