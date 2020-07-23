@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:uis/pages/emailscreen.dart';
-import 'package:uis/pages/phonescreen.dart';
+import 'package:uis/pages/loginpage.dart';
+import 'package:uis/pages/signuppage.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -11,114 +11,121 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
-    return Login();
-  }
-}
-
-class Login extends StatelessWidget {
-  const Login({
-    Key key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomPadding: true,
       backgroundColor: Colors.black,
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
-          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 8.0),
-              child: Text(
-                "Millions of songs.",
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 42,
-                  color: Colors.white,
+            Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                SizedBox(height: 40),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Text(
+                      "English(United Kingdom)",
+                      style: TextStyle(color: Colors.grey),
+                    ),
+                    Icon(
+                      Icons.keyboard_arrow_down,
+                      color: Colors.white,
+                    )
+                  ],
                 ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 8.0),
-              child: Text(
-                "Free on Spotify.",
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 42,
-                  color: Colors.white,
+                SizedBox(height: 220),
+                Text(
+                  "Instagram",
+                  style: TextStyle(
+                      fontSize: 42, fontFamily: 'Lobster', color: Colors.white),
                 ),
-              ),
-            ),
-            SizedBox(
-              height: 24,
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(
-                "Continue with",
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                  fontSize: 20,
+                SizedBox(height: 170),
+                FacebookButton(),
+                SizedBox(height: 40),
+                Row(children: <Widget>[
+                  Expanded(
+                      child: Container(
+                    margin: const EdgeInsets.only(left: 10.0, right: 20.0),
+                    child: Divider(
+                      color: Colors.white,
+                      thickness: 0.3,
+                    ),
+                  )),
+                  Text(
+                    "OR",
+                    style: TextStyle(color: Colors.grey),
+                  ),
+                  Expanded(
+                      child: Container(
+                    margin: const EdgeInsets.only(left: 20.0, right: 10.0),
+                    child: Divider(
+                      color: Colors.white,
+                      thickness: 0.3,
+                    ),
+                  )),
+                ]),
+                SizedBox(height: 15),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (_) => SignUpPage()));
+                  },
+                  child: Text(
+                    "Sign Up with Email Address or Phone Number",
+                    style: TextStyle(
+                        color: Colors.blueAccent[400],
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16),
+                  ),
                 ),
-              ),
+              ],
             ),
-            PhoneButton(),
-            FacebookButton(),
-            EmailButton(),
+            Column(
+              children: [
+                Divider(
+                  color: Colors.grey,
+                ),
+                SizedBox(
+                  height: 15,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Text(
+                      'Already have an account?',
+                      style: TextStyle(
+                        color: Colors.grey,
+                      ),
+                    ),
+                    SizedBox(
+                      width: 5.0,
+                    ),
+                    InkWell(
+                      child: Text(
+                        'Log in.',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontFamily: 'Montserrat',
+                          fontWeight: FontWeight.bold,
+                          fontSize: 17,
+                        ),
+                      ),
+                      onTap: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (_) => LoginInPage()));
+                      },
+                    ),
+                  ],
+                ),
+              ],
+            )
           ],
         ),
-      ),
-    );
-  }
-}
-
-class EmailButton extends StatelessWidget {
-  const EmailButton({
-    Key key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (_) => EmailScreen()));
-      },
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Center(
-            child: Container(
-          height: 50,
-          width: 330,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(30.0),
-            color: Colors.white,
-          ),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Icon(
-                Icons.mail_outline,
-                size: 28,
-              ),
-              SizedBox(
-                width: 10,
-              ),
-              Text(
-                "EMAIL",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ],
-          ),
-        )),
       ),
     );
   }
@@ -134,92 +141,33 @@ class FacebookButton extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Center(
-        child: Container(
-          height: 50,
-          width: 330,
-          padding: EdgeInsets.all(1),
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(30.0), color: Colors.white),
           child: Container(
-            height: 50,
-            width: 150,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(30.0), color: Colors.black),
-            child: Center(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Icon(
-                    Icons.fastfood,
-                    size: 28,
-                    color: Colors.white,
-                  ),
-                  SizedBox(
-                    width: 10,
-                  ),
-                  Text(
-                    "FACEBOOK",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ],
+        height: 50,
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(4.0),
+            color: Colors.blueAccent[400]),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(
+              Icons.phone_iphone,
+              color: Colors.white,
+              size: 28,
+            ),
+            SizedBox(
+              width: 4,
+            ),
+            Text(
+              "Log In With Facebook",
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
               ),
             ),
-          ),
+          ],
         ),
-      ),
-    );
-  }
-}
-
-class PhoneButton extends StatelessWidget {
-  const PhoneButton({
-    Key key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (_) => PhoneScreen()));
-      },
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Center(
-            child: Container(
-          height: 50,
-          width: 330,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(30.0),
-            color: Color(0xff1DB954),
-          ),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Icon(
-                Icons.phone_iphone,
-                color: Colors.white,
-                size: 28,
-              ),
-              SizedBox(
-                width: 10,
-              ),
-              Text(
-                "PHONE NUMBER",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ],
-          ),
-        )),
-      ),
+      )),
     );
   }
 }
