@@ -10,3 +10,7 @@ Login UIs of Famous Application.
 
 ![1](https://user-images.githubusercontent.com/45462725/88136385-bebaba80-cc06-11ea-9bc6-97d885ee0692.png) ![2](https://user-images.githubusercontent.com/45462725/88136474-f164b300-cc06-11ea-9281-d7888da54dd5.png) ![3](https://user-images.githubusercontent.com/45462725/88136587-2cff7d00-cc07-11ea-8ca6-120369a13823.png) ![4](https://user-images.githubusercontent.com/45462725/88136591-312b9a80-cc07-11ea-8b4d-ded0a78831c8.png) ![5](https://user-images.githubusercontent.com/45462725/88136593-312b9a80-cc07-11ea-96a2-2c23e46c46d1.png)
 
+- _Instagram_
+
+![1](https://user-images.githubusercontent.com/45462725/88274112-d7a39880-ccf8-11ea-903d-4813b2785678.png)  ![2](https://user-images.githubusercontent.com/45462725/88274116-d8d4c580-ccf8-11ea-8e84-bde634ce33db.png)  ![3](https://user-images.githubusercontent.com/45462725/88274117-d8d4c580-ccf8-11ea-9218-2adfe39107dd.png)  ![4](https://user-images.githubusercontent.com/45462725/88274118-d96d5c00-ccf8-11ea-8499-b2ff84d94145.png)  ![5](https://user-images.githubusercontent.com/45462725/88274278-11749f00-ccf9-11ea-8243-30d69daf8218.png)
+
