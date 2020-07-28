@@ -1,7 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:uis/pages/emailscreen.dart';
-import 'package:uis/pages/phonescreen.dart';
+import 'package:uis/pages/login.dart';
+import 'package:uis/pages/signup.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -11,161 +10,61 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
-    return Login();
-  }
-}
-
-class Login extends StatelessWidget {
-  const Login({
-    Key key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.black,
-      body: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 8.0),
-              child: Text(
-                "Millions of songs.",
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 42,
-                  color: Colors.white,
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 8.0),
-              child: Text(
-                "Free on Spotify.",
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 42,
-                  color: Colors.white,
-                ),
-              ),
-            ),
-            SizedBox(
-              height: 24,
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(
-                "Continue with",
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                  fontSize: 20,
-                ),
-              ),
-            ),
-            PhoneButton(),
-            FacebookButton(),
-            EmailButton(),
-          ],
+    return Container(
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage("assets/snapback.png"),
+          fit: BoxFit.cover,
+        ),
+      ),
+      child: Scaffold(
+        backgroundColor: Colors.transparent,
+        body: Align(
+          alignment: Alignment.bottomCenter,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              LoginButton(),
+              SignUpButton(),
+            ],
+          ),
         ),
       ),
     );
   }
 }
 
-class EmailButton extends StatelessWidget {
-  const EmailButton({
-    Key key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (_) => EmailScreen()));
-      },
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Center(
-            child: Container(
-          height: 50,
-          width: 330,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(30.0),
-            color: Colors.white,
-          ),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Icon(
-                Icons.mail_outline,
-                size: 28,
-              ),
-              SizedBox(
-                width: 10,
-              ),
-              Text(
-                "EMAIL",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ],
-          ),
-        )),
-      ),
-    );
-  }
-}
-
-class FacebookButton extends StatelessWidget {
-  const FacebookButton({
+class LoginButton extends StatelessWidget {
+  const LoginButton({
     Key key,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: Center(
-        child: Container(
-          height: 50,
-          width: 330,
-          padding: EdgeInsets.all(1),
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(30.0), color: Colors.white),
+      padding: const EdgeInsets.symmetric(vertical: 24.0),
+      child: GestureDetector(
+        onTap: () {
+          Navigator.push(context, MaterialPageRoute(builder: (_) => Login()));
+        },
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
           child: Container(
             height: 50,
-            width: 150,
+            width: 120,
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(30.0), color: Colors.black),
+              borderRadius: BorderRadius.circular(30.0),
+              color: Colors.white,
+            ),
             child: Center(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Icon(
-                    Icons.fastfood,
-                    size: 28,
-                    color: Colors.white,
-                  ),
-                  SizedBox(
-                    width: 10,
-                  ),
-                  Text(
-                    "FACEBOOK",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ],
+              child: Text(
+                "Log In",
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
           ),
@@ -175,50 +74,41 @@ class FacebookButton extends StatelessWidget {
   }
 }
 
-class PhoneButton extends StatelessWidget {
-  const PhoneButton({
+class SignUpButton extends StatelessWidget {
+  const SignUpButton({
     Key key,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (_) => PhoneScreen()));
-      },
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Center(
-            child: Container(
-          height: 50,
-          width: 330,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(30.0),
-            color: Color(0xff1DB954),
-          ),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Icon(
-                Icons.phone_iphone,
-                color: Colors.white,
-                size: 28,
-              ),
-              SizedBox(
-                width: 10,
-              ),
-              Text(
-                "PHONE NUMBER",
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 24.0),
+      child: GestureDetector(
+        onTap: () {
+          Navigator.push(context, MaterialPageRoute(builder: (_) => SignUp()));
+        },
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Container(
+            height: 50,
+            width: 120,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(30.0),
+              color: Colors.blueAccent,
+            ),
+            child: Center(
+              child: Text(
+                "Sign Up",
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: Colors.white,
+                  fontSize: 16,
                   fontWeight: FontWeight.bold,
                 ),
               ),
-            ],
+            ),
           ),
-        )),
+        ),
       ),
     );
   }
