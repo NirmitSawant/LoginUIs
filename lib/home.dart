@@ -1,7 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:uis/pages/emailscreen.dart';
-import 'package:uis/pages/phonescreen.dart';
+import 'package:uis/pages/loginpage.dart';
+import 'package:uis/pages/phone_forgot.dart';
+import 'package:uis/pages/signuppage.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -11,64 +11,74 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
-    return Login();
-  }
-}
-
-class Login extends StatelessWidget {
-  const Login({
-    Key key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomPadding: true,
       backgroundColor: Colors.black,
       body: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(16.0),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
-          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 8.0),
-              child: Text(
-                "Millions of songs.",
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 42,
-                  color: Colors.white,
+            SizedBox(height: 40),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Text(
+                  "मराठी",
+                  style: TextStyle(color: Colors.grey, fontSize: 18),
                 ),
+                Text(
+                  "  ",
+                  style: TextStyle(color: Colors.grey),
+                ),
+                Text(
+                  "हिंदी",
+                  style: TextStyle(color: Colors.grey, fontSize: 18),
+                ),
+                Text(
+                  "  ",
+                  style: TextStyle(color: Colors.grey),
+                ),
+                Text(
+                  "More..",
+                  style: TextStyle(color: Colors.blue, fontSize: 18),
+                ),
+              ],
+            ),
+            SizedBox(height: 150),
+            Image(
+              image: AssetImage("assets/faceb.png"),
+              height: 70,
+              width: 70,
+            ),
+            SizedBox(height: 150),
+            Text(
+              "Have you used Facebook before?",
+              style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 24,
+                  color: Colors.white),
+            ),
+            SizedBox(height: 20),
+            LoginButton(),
+            SizedBox(height: 15),
+            SignUpButton(),
+            SizedBox(height: 15),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (_) => PhoneForgot()));
+              },
+              child: Text(
+                "Forgotten Password?",
+                style: TextStyle(
+                    color: Colors.blue,
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 8.0),
-              child: Text(
-                "Free on Spotify.",
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 42,
-                  color: Colors.white,
-                ),
-              ),
-            ),
-            SizedBox(
-              height: 24,
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(
-                "Continue with",
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                  fontSize: 20,
-                ),
-              ),
-            ),
-            PhoneButton(),
-            FacebookButton(),
-            EmailButton(),
           ],
         ),
       ),
@@ -76,8 +86,8 @@ class Login extends StatelessWidget {
   }
 }
 
-class EmailButton extends StatelessWidget {
-  const EmailButton({
+class LoginButton extends StatelessWidget {
+  const LoginButton({
     Key key,
   }) : super(key: key);
 
@@ -85,98 +95,34 @@ class EmailButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (_) => EmailScreen()));
+        Navigator.push(context, MaterialPageRoute(builder: (_) => LoginPage()));
       },
       child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Center(
+          padding: const EdgeInsets.all(8.0),
+          child: Center(
             child: Container(
-          height: 50,
-          width: 330,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(30.0),
-            color: Colors.white,
-          ),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Icon(
-                Icons.mail_outline,
-                size: 28,
-              ),
-              SizedBox(
-                width: 10,
-              ),
-              Text(
-                "EMAIL",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ],
-          ),
-        )),
-      ),
-    );
-  }
-}
-
-class FacebookButton extends StatelessWidget {
-  const FacebookButton({
-    Key key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: Center(
-        child: Container(
-          height: 50,
-          width: 330,
-          padding: EdgeInsets.all(1),
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(30.0), color: Colors.white),
-          child: Container(
-            height: 50,
-            width: 150,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(30.0), color: Colors.black),
-            child: Center(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Icon(
-                    Icons.fastfood,
-                    size: 28,
-                    color: Colors.white,
-                  ),
-                  SizedBox(
-                    width: 10,
-                  ),
-                  Text(
-                    "FACEBOOK",
+                width: double.infinity,
+                height: 40,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(4.0),
+                    color: Colors.blueAccent[400]),
+                child: Center(
+                  child: Text(
+                    "Yes, Log In",
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                    ),
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18),
                   ),
-                ],
-              ),
-            ),
-          ),
-        ),
-      ),
+                )),
+          )),
     );
   }
 }
 
-class PhoneButton extends StatelessWidget {
-  const PhoneButton({
+class SignUpButton extends StatelessWidget {
+  const SignUpButton({
     Key key,
   }) : super(key: key);
 
@@ -185,41 +131,28 @@ class PhoneButton extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         Navigator.push(
-            context, MaterialPageRoute(builder: (_) => PhoneScreen()));
+            context, MaterialPageRoute(builder: (_) => SignUpPage()));
       },
       child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Center(
+          padding: const EdgeInsets.all(8.0),
+          child: Center(
             child: Container(
-          height: 50,
-          width: 330,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(30.0),
-            color: Color(0xff1DB954),
-          ),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Icon(
-                Icons.phone_iphone,
-                color: Colors.white,
-                size: 28,
-              ),
-              SizedBox(
-                width: 10,
-              ),
-              Text(
-                "PHONE NUMBER",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ],
-          ),
-        )),
-      ),
+                width: double.infinity,
+                height: 40,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(4.0),
+                    color: Colors.blue[100]),
+                child: Center(
+                  child: Text(
+                    "No, Create New Facebook Account",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        color: Colors.blue,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18),
+                  ),
+                )),
+          )),
     );
   }
 }

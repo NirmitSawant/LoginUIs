@@ -19,10 +19,10 @@ class _SplashState extends State<Splash> {
   Widget build(BuildContext context) {
     return SplashScreen(
       seconds: 5,
-      backgroundColor: Colors.black,
-      image: Image.asset("assets/spotify.jpg"),
-      photoSize: 200,
-      loaderColor: Colors.black,
+      backgroundColor: Colors.white,
+      image: Image.asset("assets/faceb.png"),
+      photoSize: 50,
+      loaderColor: Colors.white,
       navigateAfterSeconds: Home(),
     );
   }
