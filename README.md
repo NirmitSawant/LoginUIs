@@ -13,6 +13,10 @@ Code for UI would be in lib file of the each branch (I will try to make more app
 
 ![1](https://user-images.githubusercontent.com/45462725/88136385-bebaba80-cc06-11ea-9bc6-97d885ee0692.png) ![2](https://user-images.githubusercontent.com/45462725/88136474-f164b300-cc06-11ea-9281-d7888da54dd5.png) ![3](https://user-images.githubusercontent.com/45462725/88136587-2cff7d00-cc07-11ea-8ca6-120369a13823.png) ![4](https://user-images.githubusercontent.com/45462725/88136591-312b9a80-cc07-11ea-8b4d-ded0a78831c8.png) ![5](https://user-images.githubusercontent.com/45462725/88136593-312b9a80-cc07-11ea-96a2-2c23e46c46d1.png)
 
+- _Discord_
+
+
+![1](https://user-images.githubusercontent.com/45462725/90317001-ef5eed00-df43-11ea-9a1d-e20012af56dc.png)  ![2](https://user-images.githubusercontent.com/45462725/90317002-f128b080-df43-11ea-8643-2ebccba0692b.png)  ![3](https://user-images.githubusercontent.com/45462725/90317003-f259dd80-df43-11ea-9147-d0eca040693f.png)  ![4](https://user-images.githubusercontent.com/45462725/90317006-f554ce00-df43-11ea-9bcf-7e7b04da0e3d.png)
 
 - _Facebook_(DarkMode)
 
