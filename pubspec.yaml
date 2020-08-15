@@ -20,10 +20,7 @@ dev_dependencies:
     sdk: flutter
 
 flutter:
+  assets:
+    - assets/discord.jpg
 
   uses-material-design: true
-
-  assets:
-    - assets/spotify.jpg
-    - assets/faceb.png
-    - assets/party.jpg
