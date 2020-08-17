@@ -26,6 +26,11 @@ Code for UI would be in lib file of the each branch (I will try to make more app
 
 ![1](https://user-images.githubusercontent.com/45462725/88274112-d7a39880-ccf8-11ea-903d-4813b2785678.png)  ![2](https://user-images.githubusercontent.com/45462725/88274116-d8d4c580-ccf8-11ea-8e84-bde634ce33db.png)  ![3](https://user-images.githubusercontent.com/45462725/88274117-d8d4c580-ccf8-11ea-9218-2adfe39107dd.png)  ![4](https://user-images.githubusercontent.com/45462725/88274118-d96d5c00-ccf8-11ea-8499-b2ff84d94145.png)  ![5](https://user-images.githubusercontent.com/45462725/88274278-11749f00-ccf9-11ea-8243-30d69daf8218.png)
 
+- _Medium_
+
+![1](https://user-images.githubusercontent.com/45462725/90415656-08e07000-e0cf-11ea-89e6-c5e895d5d49d.png)  ![2](https://user-images.githubusercontent.com/45462725/90415653-0847d980-e0cf-11ea-85f6-8a78677ca639.png)  ![3](https://user-images.githubusercontent.com/45462725/90415648-067e1600-e0cf-11ea-9142-c1dd4b61cc9a.png)  ![4](https://user-images.githubusercontent.com/45462725/90415662-09790680-e0cf-11ea-8160-557071435b51.png)  ![5](https://user-images.githubusercontent.com/45462725/90415659-09790680-e0cf-11ea-8fb3-9b7517c1f3e8.png)
+
+
 - _Snapchat_(DarkMode)
 
 ![1](https://user-images.githubusercontent.com/45462725/88624065-f96b9980-d0c3-11ea-8207-b98795e0a126.png) ![2](https://user-images.githubusercontent.com/45462725/88624272-4b142400-d0c4-11ea-83d5-b6f3d7d723a7.png) ![3](https://user-images.githubusercontent.com/45462725/88624907-6cc1db00-d0c5-11ea-8026-ca65d5e7d664.png) ![4](https://user-images.githubusercontent.com/45462725/88624103-06888880-d0c4-11ea-932a-5972cac639a2.png)  ![5](https://user-images.githubusercontent.com/45462725/88624097-05575b80-d0c4-11ea-9692-d8f5c117e94b.png)
@@ -35,3 +40,4 @@ Code for UI would be in lib file of the each branch (I will try to make more app
 _I havent used any extraordinary widgets even though i could have made the code smaller to look, tried to keep things as basic as possible and tried my best to excuete this UIs with the common widgets and give you all a sense that you can build your own decorations and designed widgets with all minimal basics._
 
 _**!!Can suggest some challengling login UIs!!**_
+
