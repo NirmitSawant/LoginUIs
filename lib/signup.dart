@@ -1,18 +1,17 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:uis/pages/emailup.dart';
-import 'package:uis/signup.dart';
+import 'package:uis/home.dart';
+import 'package:uis/pages/emailin.dart';
 
-class Home extends StatefulWidget {
+class SignUp extends StatefulWidget {
   @override
-  _HomeState createState() => _HomeState();
+  _SignUpState createState() => _SignUpState();
 }
 
-class _HomeState extends State<Home> {
+class _SignUpState extends State<SignUp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFe8f3eb),
+      backgroundColor: Color(0xFFd7efef),
       body: Padding(
         padding: const EdgeInsets.all(32.0),
         child: Column(
@@ -33,19 +32,10 @@ class _HomeState extends State<Home> {
                 children: [
                   Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: Column(
-                      children: [
-                        Text(
-                          "Smart Stories for",
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 32),
-                        ),
-                        Text(
-                          "curious people.",
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 32),
-                        ),
-                      ],
+                    child: Text(
+                      "Welcome back.",
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 32),
                     ),
                   ),
                   Padding(
@@ -71,7 +61,7 @@ class _HomeState extends State<Home> {
                               width: 5,
                             ),
                             Text(
-                              "Sign up with Google",
+                              "Sign in with Google",
                               style: TextStyle(fontSize: 16),
                             )
                           ],
@@ -102,7 +92,38 @@ class _HomeState extends State<Home> {
                               width: 5,
                             ),
                             Text(
-                              "Sign up with Facebook",
+                              "Sign in with Facebook",
+                              style: TextStyle(fontSize: 16),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Container(
+                      width: 260,
+                      height: 50,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(8.0),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 16, vertical: 8),
+                        child: Row(
+                          children: [
+                            Image(
+                              image: AssetImage("assets/fb.png"),
+                              width: 40,
+                              height: 25,
+                            ),
+                            SizedBox(
+                              width: 5,
+                            ),
+                            Text(
+                              "Sign in with Twitter",
                               style: TextStyle(fontSize: 16),
                             )
                           ],
@@ -113,7 +134,7 @@ class _HomeState extends State<Home> {
                   GestureDetector(
                     onTap: () {
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (_) => EmailUp()));
+                          MaterialPageRoute(builder: (_) => EmailIn()));
                     },
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
@@ -137,7 +158,7 @@ class _HomeState extends State<Home> {
                                 width: 8,
                               ),
                               Text(
-                                "Sign up with email",
+                                "Sign in with email",
                                 style: TextStyle(fontSize: 16),
                               )
                             ],
@@ -152,7 +173,7 @@ class _HomeState extends State<Home> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         Text(
-                          "Already have an account? ",
+                          "Don't have an account? ",
                           style:
                               TextStyle(color: Colors.grey[700], fontSize: 18),
                         ),
@@ -162,10 +183,10 @@ class _HomeState extends State<Home> {
                         InkWell(
                           onTap: () {
                             Navigator.push(context,
-                                MaterialPageRoute(builder: (_) => SignUp()));
+                                MaterialPageRoute(builder: (_) => Home()));
                           },
                           child: Text(
-                            'Sign in.',
+                            'Sign up.',
                             style: TextStyle(
                                 color: Colors.green[800], fontSize: 18),
                           ),
@@ -173,23 +194,6 @@ class _HomeState extends State<Home> {
                       ],
                     ),
                   ),
-                ],
-              ),
-            ),
-            Center(
-              child: Column(
-                children: [
-                  Text(
-                    "By creating an account, I accept Medium's",
-                    style: TextStyle(color: Colors.grey[700], fontSize: 14),
-                  ),
-                  Text(
-                    "Terms of Service",
-                    style: TextStyle(
-                        color: Colors.grey[700],
-                        fontSize: 14,
-                        decoration: TextDecoration.underline),
-                  )
                 ],
               ),
             ),

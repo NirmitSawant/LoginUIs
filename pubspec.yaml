@@ -21,6 +21,8 @@ dev_dependencies:
 
 flutter:
   assets:
-    - assets/discord.jpg
+    - assets/medium.png
+    - assets/goo.png
+    - assets/fb.png
 
   uses-material-design: true

@@ -20,7 +20,7 @@ class _SplashState extends State<Splash> {
     return SplashScreen(
       seconds: 5,
       backgroundColor: Colors.black,
-      image: Image.asset("assets/discord.jpg"),
+      image: Image.asset("assets/medium.png"),
       photoSize: 130,
       loaderColor: Colors.black,
       navigateAfterSeconds: Home(),
