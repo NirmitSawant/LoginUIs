@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:uis/pages/email/loginpage.dart';
-import 'package:uis/pages/email/signuppage.dart';
+import 'email/loginpage.dart';
+import 'email/signuppage.dart';
 
 class EmailScreen extends StatefulWidget {
   @override

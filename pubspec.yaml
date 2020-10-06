@@ -14,6 +14,7 @@ dependencies:
 
   cupertino_icons: ^0.1.3
   splashscreen: ^1.2.0
+  animated_dialog_box: ^0.0.2
 
 dev_dependencies:
   flutter_test:
@@ -25,7 +26,20 @@ flutter:
 
   assets:
     - assets/spotify.jpg
-
+    - assets/snapchat.png
+    - assets/snapback.png
+    - assets/discord.jpg
+    - assets/discord.png
+    - assets/spotify.jpg
+    - assets/faceb.png
+    - assets/party.jpg
+    - assets/instagram.jpg
+    - assets/insta.jpeg
+    - assets/medium.png
+    - assets/goo.png
+    - assets/fb.png
+    - assets/insta.png
+    - assets/mediumICON.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 
@@ -51,3 +65,7 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+  fonts:
+     - family: Lobster
+       fonts:
+         - asset: assets/fonts/Lobster-Regular.ttf

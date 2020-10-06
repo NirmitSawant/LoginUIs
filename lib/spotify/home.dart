@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:uis/pages/emailscreen.dart';
-import 'package:uis/pages/phonescreen.dart';
+import 'pages/emailscreen.dart';
+import 'pages/phonescreen.dart';
 
 class Home extends StatefulWidget {
   @override
