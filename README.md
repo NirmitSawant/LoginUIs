@@ -43,4 +43,4 @@ _I havent used any extraordinary widgets even though i could have made the code 
 Your contribution towards creating your own new Login UI for other applications is Welcomed. I will merge or label the good ones.
 Try to name the files under the name of application. Just keep it simple and happy contirubtion.
 
-_**!!Can suggest some challengling login UIs!!**_
+_**!!Can suggest some challengling login UIs Stop Working now!!**_
