@@ -37,7 +37,7 @@ Code for UI would be in lib file of the each branch (I will try to make more app
 
 
 ### Disclaimer
-_I havent used any extraordinary widgets even though i could have made the code smaller to look, tried to keep things as basic as possible and tried my best to excuete this UIs with the common widgets and give you all a sense that you can build your own decorations and designed widgets with all minimal basics._
+_I havent used any extraordinary widgets even though i could have made the code smaller to look, tried to keep things as basic as possible and tried my best to excuete this UIs with the common widgets and give you all a sense that you can build your own decorations and design widgets with all minimal basics._
 
 ## Contributions:
 Your contribution towards creating your own new Login UI for other applications is Welcomed. I will merge or label the good ones.
